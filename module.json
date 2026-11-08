@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "prototype-assets",
+  "name": "PrototypeAssets",
+  "version": "2.0.0",
+  "repository": "https://github.com/ZhongTyler/AWS-PrototypeAssets.git",
+  "payload": ".",
+  "entrypoints": {
+    "human": "README.md",
+    "agent": "AGENTS.md",
+    "manager": ".module/module_manager.py"
+  },
+  "runtime": [],
+  "provides": [
+    "asset-catalog"
+  ],
+  "requires": [],
+  "optional": [
+    "game-presentation",
+    "prototyping"
+  ],
+  "interfaces": {
+    "module-entry": {
+      "version": 1,
+      "entry": "README.md",
+      "contract": "docs/module-cooperation.md"
+    }
+  },
+  "related": [
+    {
+      "schema_version": 1,
+      "id": "game-presentation",
+      "name": "GamePresentation",
+      "version": "2.0.0",
+      "repository": "https://github.com/ZhongTyler/AWS-GamePresentation.git",
+      "purpose": "Prepare, review and integrate game presentation resources.",
+      "interfaces": [
+        "module-entry@1"
+      ],
+      "integration": "Review existing workflows and the peer entry before choosing an adapter.",
+      "panorama": true
+    },
+    {
+      "schema_version": 1,
+      "id": "game-project",
+      "name": "GameProject",
+      "version": "2.0.0",
+      "repository": "https://github.com/ZhongTyler/AWS-GameProject.git",
+      "purpose": "Create an owned Godot project with maintenance and resource atlases.",
+      "interfaces": [
+        "module-entry@1"
+      ],
+      "integration": "Review existing workflows and the peer entry before choosing an adapter.",
+      "panorama": false
+    },
+    {
+      "schema_version": 1,
+      "id": "fromdemotospec",
+      "name": "FromDemoToSpec",
+      "version": "2.0.0",
+      "repository": "https://github.com/ZhongTyler/AWS-FromDemoToSpec.git",
+      "purpose": "Develop playable prototypes and evidence-based production handoffs.",
+      "interfaces": [
+        "module-entry@1"
+      ],
+      "integration": "Review existing workflows and the peer entry before choosing an adapter.",
+      "panorama": false
+    }
+  ],
+  "origin": {
+    "repository": "https://github.com/ZhongTyler/AgentWorkSpace",
+    "tag": "v1.30.0",
+    "commit": "28ca403cb45baabe0b18aeecc2b4fe69cdef6b45",
+    "path": "packages/prototype-assets",
+    "source_revision": "5abe108be291076b4e44717d17c740fca230c8e7"
+  },
+  "manager": {
+    "protocol": 1,
+    "source": "https://github.com/ZhongTyler/AgentWorkSpace/tree/main/scripts",
+    "files": {
+      "module_manager.py": "bfa0d8c7ea6efda126b7a8c656409875994b4bd1256e6d90f5d75652a9aca2b0",
+      "module_docs.py": "b0d9cf2aaba187d14be679de61f16c3dfc9c8346ff4739d176fa58983ab7ae65"
+    }
+  }
+}
